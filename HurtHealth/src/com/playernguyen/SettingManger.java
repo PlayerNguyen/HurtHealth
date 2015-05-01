@@ -27,4 +27,15 @@ public class SettingManger {
 		}
 	}
 	
+	public FileConfiguration getConfig(){
+		return config;
+	}
+	
+	public void save(){
+		try {
+			config.save(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
