@@ -15,7 +15,7 @@ public class HurtHealthCmd implements CommandExecutor {
 
 		if(args.length == 0){
 			if(sender.hasPermission("hurthealth.cmd")||sender.hasPermission("hurthealth.*")){
-				sender.sendMessage(ChatColor.RED+"Hurt Health version 1.1 beta.");
+				sender.sendMessage(ChatColor.RED+"Hurt Health version 1.1.");
 				sender.sendMessage(ChatColor.RED+"Use /hurthealth help to get help.");
 				return true;
 			} else {
@@ -48,7 +48,7 @@ public class HurtHealthCmd implements CommandExecutor {
 		
 		if(args[0].equalsIgnoreCase("info")){
 			if(sender.hasPermission("hurthealth.info")|| sender.hasPermission("hurthealth.*")){
-				sender.sendMessage(ChatColor.RED+"Hurt Health version 1.1 beta. Make by Player Nguyen.");
+				sender.sendMessage(ChatColor.RED+"Hurt Health version 1.1. Made by Player Nguyen.");
 			} else {
 				sender.sendMessage(ChatColor.RED+"You don't have permissions to this command.");
 				return true;
