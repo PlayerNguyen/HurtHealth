@@ -1,2 +1,6 @@
 
-auto-update: true
+# Secord: 2 sec
+time-delay: 2
+
+# Format: You can read doc format in resource plugin
+format: '%red_love_health%'

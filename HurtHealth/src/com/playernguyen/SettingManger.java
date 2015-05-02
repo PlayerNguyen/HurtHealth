@@ -11,20 +11,13 @@ public class SettingManger {
 	
 	private FileConfiguration config;
 	
-	private SettingManger sm = new SettingManger();
+	private static SettingManger sm = new SettingManger();
 	
-	public SettingManger getSetting(){
+	public static SettingManger getSetting(){
 		return sm;
 	}
 	
 	public void setup(){
-		if(!file.exists()){
-			try {
-				config.save(file);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 	}
 	
 	public FileConfiguration getConfig(){

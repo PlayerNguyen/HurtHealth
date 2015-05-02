@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.playernguyen.cmds.HurtHealthCmd;
 import com.playernguyen.listener.PlayerHurtEvent;
 
 public class HurtHealth extends JavaPlugin {
@@ -20,12 +21,18 @@ public class HurtHealth extends JavaPlugin {
 		} else {
 			MessageManager.getMessage.logInfo("[HurtHealth] Hook with Holographic Display.");
 		}
+		MessageManager.getMessage.log("[HurtHealth] Setup config.yml.");
+		getConfig().options().copyDefaults(true);
+		saveDefaultConfig();
 		MessageManager.getMessage.log("[HurtHealth] Done.");
+		// Set Command 
+		getCommand("hurthealth").setExecutor(new HurtHealthCmd());
 	}
 	
 	public static Plugin getHurtHealth(){
 		return Bukkit.getServer().getPluginManager().getPlugin("HurtHealth");
 	}
+	
 	
 	
 	
